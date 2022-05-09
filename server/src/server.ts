@@ -8,6 +8,6 @@ app.use(cors());           // uma forma de fazer controle de seguranca, para que
 app.use(express.json()); // por padrao nao entende o retorno como json, por isso define esse trecho
 app.use(routes);
 
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
    console.log('HTTP Server Running');
 });
